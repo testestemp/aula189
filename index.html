@@ -1,0 +1,27 @@
+<script>
+    let arrayNumeroAleatorios =[]
+    let contador = 0
+
+    function numeroAleatorios(){
+        if(contador < 10){
+            arrayNumeroAleatorios.push(Math.round(Math.random() + 10))
+
+            contador += 1
+
+            return numeroAleatorios()
+        }
+
+        return "Numeros gerados com sucesso"
+    }
+
+    console.log(numeroAleatorios())
+
+    console.log(arrayNumeroAleatorios)
+
+    arrayNumeroAleatorios.forEach((element, index ) => console.log('Elemento: $(element),index: $(index)'))
+
+    const arrayModificado = arrayNumeroAleatorios.map(element => element * 2)
+
+    console.log(arrayModificado)
+
+</script>
